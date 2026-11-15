@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Petal Hangman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- PyScript lets Python run right in the browser -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+  <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- shows while Python wakes up -->
+  <div class="loading" id="loading">
+    <div class="loading-flower">🌸</div>
+    <p>waking up python...</p>
+    <p class="tiny">(this takes a few seconds the first time)</p>
+  </div>
+
+  <section class="card">
+    <h1>✿ petal hangman ✿</h1>
+    <p class="sub">guess the word before the flower loses all its petals</p>
+
+    <div class="flower" id="flower">
+      <div class="petal" id="petal0"></div>
+      <div class="petal" id="petal1"></div>
+      <div class="petal" id="petal2"></div>
+      <div class="petal" id="petal3"></div>
+      <div class="petal" id="petal4"></div>
+      <div class="petal" id="petal5"></div>
+      <div class="center" id="center">😊</div>
+      <div class="stem"></div>
+    </div>
+
+    <div class="category" id="category"></div>
+    <div class="word" id="word"></div>
+    <div class="message" id="message"></div>
+
+    <div class="keyboard" id="keyboard"></div>
+
+    <div class="bottom">
+      <span class="stats" id="stats">wins: 0 · streak: 0</span>
+      <button class="new-btn" id="newBtn">new word 🌱</button>
+    </div>
+  </section>
+
+  <!-- all the game logic lives in main.py -->
+  <script type="py" src="main.py"></script>
+</body>
+</html>
